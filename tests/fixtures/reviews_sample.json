@@ -1,0 +1,55 @@
+{
+  "reviews": [
+    {
+      "store": "play",
+      "review_id_source": "p-kyc-1",
+      "rating": 2,
+      "title": "KYC stuck",
+      "text": "Verification has been pending for two full days.",
+      "date": "2026-07-15",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww",
+      "author": "should-not-appear",
+      "email": "alice@example.com",
+      "device": "deadbeef"
+    },
+    {
+      "store": "play",
+      "review_id_source": "p-pay-1",
+      "rating": 1,
+      "title": "UPI failed",
+      "text": "Add money with UPI failed twice today again.",
+      "date": "2026-08-01",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "play",
+      "review_id_source": "p-wd-1",
+      "rating": 2,
+      "title": "Withdrawal delay",
+      "text": "Bank withdrawal sat in processing for a day.",
+      "date": "2026-08-20",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "app_store",
+      "review_id_source": "ios-onb-1",
+      "rating": 3,
+      "title": "Onboarding long",
+      "text": "Account opening asked for the same document twice.",
+      "date": "2026-06-27",
+      "locale": "en_IN"
+    },
+    {
+      "store": "app_store",
+      "review_id_source": "ios-stmt-1",
+      "rating": 4,
+      "title": "Statements ok",
+      "text": "P&L statement downloaded fine after the last update.",
+      "date": "2026-09-05",
+      "locale": "en_IN"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "feed": {
+    "entry": [
+      {
+        "updated": { "label": "2026-07-01T12:00:00-07:00" },
+        "id": { "label": "https://itunes.apple.com/id1404871703" },
+        "title": { "label": "Groww" }
+      },
+      {
+        "author": { "name": { "label": "ios.user" } },
+        "im:rating": { "label": "2" },
+        "title": { "label": "KYC on iPhone" },
+        "content": { "label": "The e-KYC camera step failed twice during account setup." },
+        "id": { "label": "ios-rss-1" },
+        "updated": { "label": "2026-07-20T10:15:00+05:30" }
+      }
+    ]
+  }
+}

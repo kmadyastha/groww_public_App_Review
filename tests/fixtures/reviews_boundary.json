@@ -1,0 +1,34 @@
+{
+  "reviews": [
+    {
+      "store": "play",
+      "review_id_source": "bound-start",
+      "rating": 2,
+      "title": "Start boundary",
+      "text": "Review on the first day of the window.",
+      "date": "2026-06-27",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "play",
+      "review_id_source": "bound-end",
+      "rating": 3,
+      "title": "End boundary",
+      "text": "Review on the last day of the window.",
+      "date": "2026-09-05",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "play",
+      "review_id_source": "bound-ist",
+      "rating": 4,
+      "title": "UTC maps to IST start",
+      "text": "UTC evening should count as 27 Jun IST.",
+      "date": "2026-06-26T20:00:00Z",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "reviews": [
+    {
+      "store": "play",
+      "review_id_source": "old-1",
+      "rating": 1,
+      "title": "Old KYC complaint",
+      "text": "This review is from last year.",
+      "date": "2025-01-15",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "app_store",
+      "review_id_source": "old-2",
+      "rating": 5,
+      "title": "Old praise",
+      "text": "Loved the app in 2024.",
+      "date": "2025-12-01",
+      "locale": "en_IN"
+    }
+  ]
+}

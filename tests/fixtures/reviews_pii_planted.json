@@ -1,0 +1,55 @@
+{
+  "reviews": [
+    {
+      "store": "play",
+      "review_id_source": "pii-play-1",
+      "rating": 1,
+      "title": "KYC delay for two full days",
+      "text": "Email alice@example.com phone +91 90000 00000 device deadbeef-dead-beef-dead-beefdeadbeef and @alice_user. Employees like Ansh Agarwal mute the call during verification.",
+      "date": "2026-08-01",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww",
+      "author": "alice",
+      "email": "alice@example.com",
+      "device": "deadbeef-dead-beef-dead-beefdeadbeef"
+    },
+    {
+      "store": "play",
+      "review_id_source": "pii-play-upi",
+      "rating": 2,
+      "title": "UPI add money failed again today",
+      "text": "Add money with UPI failed twice today again from name@oksbi compared with Zerodha and 5paisa.",
+      "date": "2026-08-03",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "play",
+      "review_id_source": "pii-play-only-email",
+      "rating": 1,
+      "title": null,
+      "text": "alice@example.com",
+      "date": "2026-08-04",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    },
+    {
+      "store": "app_store",
+      "review_id_source": "pii-ios-name-title",
+      "rating": 5,
+      "title": "Pradeep Sholapurkar",
+      "text": "The account opening flow asked for the same document twice now on this phone.",
+      "date": "2026-08-02",
+      "locale": "en_IN"
+    },
+    {
+      "store": "app_store",
+      "review_id_source": "pii-ios-kyc-title",
+      "rating": 2,
+      "title": "KYC on iPhone",
+      "text": "The e-KYC camera step failed twice during account setup on this phone.",
+      "date": "2026-07-20",
+      "locale": "en_IN"
+    }
+  ]
+}

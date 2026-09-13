@@ -1,0 +1,33 @@
+# MCP delivery via THIS Cursor project only (gmail + google-drive plugins).
+# No second MCP server. No Google OAuth/REST in this repo.
+
+docs:
+  server: google-drive
+  title_template: "Groww Weekly Review Pulse — {start} to {end}"
+  mime_type: application/vnd.google-apps.document
+  tools:
+    search: search_files
+    create: create_file
+    trash: trash_file
+
+gmail:
+  server: gmail
+  tools:
+    create_draft: create_draft
+    send: send_message
+  # Operator-only send (CLI --send / weekly job). Never bulk, never forward/reply.
+  send: true
+
+allow:
+  - search_files
+  - create_file
+  - trash_file
+  - create_draft
+
+# Bound only when the operator explicitly sends (--send / weekly).
+allow_send:
+  - send_message
+
+never_bind:
+  - forward
+  - reply

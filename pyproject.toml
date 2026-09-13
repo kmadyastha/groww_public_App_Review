@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pulse"
+version = "0.1.0"
+description = "Groww weekly app-review pulse agent"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain[mcp]>=0.3.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-groq>=0.3.0",
+    "langgraph>=0.2.0",
+    "google-play-scraper>=1.2.0",
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "google-auth>=2.0",
+    "google-auth-oauthlib>=1.2.0",
+    "google-api-python-client>=2.0",
+    "fpdf2>=2.8.0",
+    "pydantic>=2.0",
+    "PyYAML>=6.0",
+    "pytest>=8.0",
+]
+
+[project.scripts]
+pulse = "pulse.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+markers = [
+    "live_llm: optional live Groq clustering (not required for CI)",
+    "live_mcp: optional live Docs/Gmail MCP smoke (not required for CI)",
+]

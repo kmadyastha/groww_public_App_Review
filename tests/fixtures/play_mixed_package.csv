@@ -1,0 +1,3 @@
+rating,title,text,date,package,locale
+2,Other app,This is not Groww and should be dropped from ingest.,2026-08-01,com.other.app,en_IN
+1,Groww KYC,Verification has been pending in Groww for two days.,2026-08-01,com.nextbillion.groww,en_IN

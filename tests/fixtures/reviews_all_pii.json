@@ -1,0 +1,14 @@
+{
+  "reviews": [
+    {
+      "store": "play",
+      "review_id_source": "pii-only-1",
+      "rating": 1,
+      "title": null,
+      "text": "alice@example.com bob@example.com carol@example.com dave@example.com eve@example.com frank@example.com grace@example.com hank@example.com",
+      "date": "2026-08-01",
+      "locale": "en_IN",
+      "package": "com.nextbillion.groww"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+product:
+  name: Groww
+  play_id: com.nextbillion.groww
+  play_hl: en_IN
+  # Official App Store id: https://apps.apple.com/in/app/groww-stocks-mutual-fund-ipo/id1404871703
+  app_store_id: "1404871703"
+
+window:
+  weeks: 10
+
+limits:
+  max_themes: 5
+  pulse_themes: 3
+  quotes: 3
+  actions: 3
+  max_words: 250
+
+operator:
+  email: karthik.katu@gmail.com
+
+llm:
+  # Anthropic Claude (paid). Groq remains optional via PULSE_LLM_PROVIDER=groq.
+  # Not the OpenAI API.
+  provider: anthropic
+  model: claude-sonnet-5
