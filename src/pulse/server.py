@@ -66,13 +66,16 @@ def ensure_insights(weeks: int, *, refresh: bool = False) -> dict[str, Any]:
         cached = load_dashboard(span)
         if cached:
             return cached
-    logger.info("Building dashboard cache for %s weeks", span)
+    has_raw = (DEFAULT_RAW / "play_reviews.json").is_file() or (
+        DEFAULT_RAW / "app_store_reviews.json"
+    ).is_file()
+    logger.info("Building dashboard cache for %s weeks (fetch_public=%s)", span, not has_raw)
     config = load_config()
     result = run(
         config=config,
-        raw_dir=DEFAULT_RAW if DEFAULT_RAW.exists() else None,
+        raw_dir=DEFAULT_RAW if has_raw else None,
         weeks=span,
-        fetch_public=False,
+        fetch_public=not has_raw,
         send_email=False,
     )
     if result.status == "failed" or result.pulse is None:
