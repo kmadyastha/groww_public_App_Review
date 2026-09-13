@@ -1,0 +1,15 @@
+.git
+.cursor
+.venv
+venv
+__pycache__
+*.pyc
+.pytest_cache
+web/node_modules
+web/dist
+data/cache
+data/raw/*.json
+data/subscribers.json
+data/gmail_token.json
+tests
+Docs
