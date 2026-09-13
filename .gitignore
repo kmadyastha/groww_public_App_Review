@@ -25,3 +25,4 @@ data/subscribers.json
 data/gmail_token.json
 web/node_modules/
 web/dist/
+data/gmail_oauth_pkce.json

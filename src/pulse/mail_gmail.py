@@ -21,6 +21,7 @@ logger = logging.getLogger("pulse.mail")
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 TOKEN_PATH = REPO_ROOT / "data" / "gmail_token.json"
+PKCE_PATH = REPO_ROOT / "data" / "gmail_oauth_pkce.json"
 SEND_SCOPE = "https://www.googleapis.com/auth/gmail.send"
 
 
@@ -80,10 +81,14 @@ def authorization_url() -> str:
     flow = Flow.from_client_config(
         _client_config(), scopes=[SEND_SCOPE], redirect_uri=redirect_uri()
     )
-    url, _state = flow.authorization_url(
+    url, state = flow.authorization_url(
         access_type="offline",
-        include_granted_scopes="true",
         prompt="consent",
+    )
+    PKCE_PATH.parent.mkdir(parents=True, exist_ok=True)
+    PKCE_PATH.write_text(
+        json.dumps({"code_verifier": flow.code_verifier, "state": state}),
+        encoding="utf-8",
     )
     return url
 
@@ -94,6 +99,9 @@ def exchange_code(code: str) -> None:
     flow = Flow.from_client_config(
         _client_config(), scopes=[SEND_SCOPE], redirect_uri=redirect_uri()
     )
+    if PKCE_PATH.is_file():
+        stored = json.loads(PKCE_PATH.read_text(encoding="utf-8"))
+        flow.code_verifier = stored.get("code_verifier")
     flow.fetch_token(code=code)
     creds = flow.credentials
     TOKEN_PATH.parent.mkdir(parents=True, exist_ok=True)
@@ -109,6 +117,8 @@ def exchange_code(code: str) -> None:
         ),
         encoding="utf-8",
     )
+    if PKCE_PATH.is_file():
+        PKCE_PATH.unlink()
 
 
 def _credentials():
