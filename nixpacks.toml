@@ -1,0 +1,5 @@
+[phases.install]
+cmds = [
+  "python -m pip install --upgrade pip",
+  "python -m pip install .",
+]

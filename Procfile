@@ -1,1 +1,1 @@
-web: python -m pulse.server
+web: PYTHONPATH=src python -m pulse.server
